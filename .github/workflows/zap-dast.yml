@@ -1,13 +1,13 @@
 on:
   push:
-    branches: [main]
-      steps:
+    branches: [ main ]
+  
 jobs:
   zap_scan:
     runs-on: ubuntu-latest
     name: Scan DAST
     steps:
-      - name: OWASP Zap Scan
-        uses: zaproxy/action-full-scan@v0.3.0
-        with:
-          target: 'https://www.zaproxy.org'
+    - name: OWASP Zap Scan
+      uses: zaproxy/action-full-scan@v0.3.0
+      with:
+        target: 'https://www.zaproxy.org'
