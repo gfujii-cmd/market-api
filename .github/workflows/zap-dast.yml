@@ -8,6 +8,6 @@ jobs:
     name: Scan DAST
     steps:
     - name: OWASP Zap Scan
-      uses: zaproxy/action-full-scan@v0.3.0
+      uses: zaproxy/action-baseline@v0.6.1
       with:
         target: 'https://www.zaproxy.org'
