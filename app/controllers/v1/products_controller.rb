@@ -1,6 +1,7 @@
 class V1::ProductsController < ApplicationController
   def index 
-    @products = Product.all
+    # Exemplo de SQL Injection
+    @products = Product.find_by "name = '#{params[:user_name]}'"
 
     render json: @products, status: :ok
   end
